@@ -26,8 +26,12 @@ body {
 }
 
 
+nav {
+  margin-bottom: 5%;
+}
+
 footer {
-  width: 100%;
+  width: 100vw;
   
   /* Ensure footer is full width */
   /* background-color: white; */
@@ -93,19 +97,25 @@ p {
   /*box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
   position: relative;
   height: auto; /* Adjust height to auto for responsiveness */
+  
   border-radius: 10px;
-  padding: 2em;
+  padding: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   margin: 0; /* Remove any margin */
+
   box-sizing: border-box; /* Include padding in the width */
   max-width: 300px; /* Set a maximum width for the cards */
   width: 100%; /* Ensure it takes the full width up to max-width */
-  max-height: 420px;
+  max-height: 600px;/* change image-size height */
 }
 
 .slider-image-wrapper {
   height: 200px;
   width: 100%;
   overflow: hidden;
+  height: 600px;/* change image-size height */
+  
 }
 
 .slider-item {
@@ -120,7 +130,7 @@ p {
   /*background: linear-gradient(270deg, #f7f9ff 0%, #f2f6ff 100%);*/
   cursor: -webkit-grab;
   cursor: grab;
-  
+
 }
 
 .slider-item-content {
@@ -132,9 +142,7 @@ p {
   transition: 0.4s;
 }
 
-.swiper-slide {
-/*background: #fff;*/
-}
+
 
 .slider-item-content>* {
   opacity: 0;
@@ -164,7 +172,6 @@ p {
 }
 
 .swiper-pagination-bullet {
-  border-radius: 0;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -244,16 +251,33 @@ p {
 }
 
 .swiper-card-slider {
-  margin-top: 28em;
+  margin-top: 20em;
+  margin-left: 20em;
+  margin-right: 20em;
+  transform: scale(0.8);
 }
+
+@media screen and (max-width: 464px) {
+
+  .swiper-card-slider {
+    margin-top: 120em;
+    
+    
+  }
+
+}
+
+
 
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Four columns per row */
-  gap: 16px; /* Space between items */
+  gap: 0.01px; /* Space between items */
   padding-left: 16px; /* Space on the left */
   padding-right: 16px; /* Space on the right */
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 @media screen and (max-width: 768px) {
@@ -264,11 +288,8 @@ p {
 
 @media screen and (max-width: 300px) {
   .grid {
-    grid-template-columns: 1fr; /* One column on small screens */
+    grid-template-columns: repeat(1, 1fr); /* One column on small screens */
   }
+  
 }
-
-
-
-
 
